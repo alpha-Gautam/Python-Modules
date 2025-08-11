@@ -1,0 +1,29 @@
+| Operation                     | Example                   | Time Complexity | Notes                                |
+| ----------------------------- | ------------------------- | --------------- | ------------------------------------ |
+| **Create list from iterable** | `lst = list(iterable)`    | O(n)            | Copies all elements from iterable    |
+| **Index access**              | `lst[i]`                  | O(1)            | Random access by index               |
+| **Index assignment**          | `lst[i] = x`              | O(1)            | Replace element                      |
+| **Append**                    | `lst.append(x)`           | O(1) amortized  | Adds at end                          |
+| **Pop (end)**                 | `lst.pop()`               | O(1)            | Removes last element                 |
+| **Pop (at index)**            | `lst.pop(i)`              | O(n)            | Shifts elements left                 |
+| **Insert at end**             | `lst.insert(len(lst), x)` | O(1) amortized  | Same as append                       |
+| **Insert at beginning**       | `lst.insert(0, x)`        | O(n)            | Shifts all elements right            |
+| **Insert at middle**          | `lst.insert(k, x)`        | O(n)            | Shifts tail elements                 |
+| **Remove by value**           | `lst.remove(x)`           | O(n)            | Searches for first match then shifts |
+| **Delete by index**           | `del lst[i]`              | O(n)            | Shifts tail elements                 |
+| **Clear list**                | `lst.clear()`             | O(1)            | Removes all references               |
+| **Length**                    | `len(lst)`                | O(1)            | Stored internally                    |
+| **Concatenate**               | `lst1 + lst2`             | O(n + m)        | Creates new list                     |
+| **Replicate**                 | `lst * k`                 | O(n·k)          | Creates new list                     |
+| **Slice read**                | `lst[a:b]`                | O(k)            | k = slice length                     |
+| **Slice write**               | `lst[a:b] = iterable`     | O(n + m)        | Deletes slice, inserts iterable      |
+| **Slice delete**              | `del lst[a:b]`            | O(n)            | Shifts tail elements                 |
+| **Extend**                    | `lst.extend(iterable)`    | O(k)            | k = len(iterable)                    |
+| **Iterate**                   | `for x in lst:`           | O(n)            | Loops over all elements              |
+| **Search (`in`)**             | `x in lst`                | O(n)            | Linear search                        |
+| **Count occurrences**         | `lst.count(x)`            | O(n)            | Linear scan                          |
+| **Find index**                | `lst.index(x)`            | O(n)            | Linear search                        |
+| **Sort**                      | `lst.sort()`              | O(n log n)      | Timsort                              |
+| **Sorted copy**               | `sorted(lst)`             | O(n log n)      | Creates new list                     |
+| **Reverse in-place**          | `lst.reverse()`           | O(n)            | Modifies original                    |
+| **Reversed iterator**         | `reversed(lst)`           | O(1)            | Returns iterator, lazy               |
