@@ -20,5 +20,26 @@ class y(x):
         self.__private = 6
 
    
-obj= y()
-obj.display()  
+# obj= y()
+# obj.display()  
+
+
+class person:
+    age = 10
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):
+        print(f"Name: {self.name}, Age: {self.age}")
+    @classmethod
+    def change_age(cls, new_age):
+        cls.age = new_age
+
+a = person("Alice")
+a.display()
+a.change_age(30)
+person.change_age(40)
+a.display()
+
+b = person("Bob")
+b.display()
